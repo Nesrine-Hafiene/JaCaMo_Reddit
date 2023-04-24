@@ -1,4 +1,4 @@
-This is a "sitauted" version of the rreddit example. The dynamic facts that animate the NOPL dynamics are constituted  from the environment instead of being produced by operations in the artifacts. The constitutive specification is in /src/org/constitutive.sai
+This is a JaCaMo version of the reddit example.  The constitutive norms are in /src/org/constitutive.sai
 
 
 Running the example:
@@ -6,7 +6,7 @@ Running the example:
 
 or
 
-(2) in a terminal, type #jacamo house.jcm.
+(2) in a terminal, type #jacamo reddit.jcm.
 
 
 While the example is running:
