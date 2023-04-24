@@ -1,0 +1,49 @@
+/*
+    JaCaMo Project for the house building scenario used
+    initially in the Multi-Agent Programming Tutorial @ EASSS 2010
+
+*/
+
+mas reddit_actions {
+
+
+ agent bob{
+        focus: wsp_reddit.auction_for_Posts
+   }
+
+ agent alice{
+        focus: wsp_reddit.auction_for_Posts
+
+   }
+ agent maria{
+        focus: wsp_reddit.auction_for_Posts
+
+   }
+
+
+
+
+   workspace wsp_reddit{
+     artifact auction_for_Posts: tools.RedditMgmt("common")
+     artifact clock : cartago.tools.Clock()
+   }
+	
+
+   institution bh:constitutive.sai{
+       workspaces: wsp_reddit
+   }
+ 
+ 
+    organisation ora4mas : reddit.xml {
+        group reddit_group: reddit_group {
+           debug: inspector_gui(on)
+        }
+        scheme redditsch: redditsch{
+           debug: inspector_gui(on)
+        }
+
+        situated: bh
+    }
+
+}
+

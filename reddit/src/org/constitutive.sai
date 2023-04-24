@@ -1,0 +1,26 @@
+institution_id: bhInst.
+
+status_functions:
+states: play(A,R,G), responsible(G,S), committed(A,Mission,S), achieved(S,G,A),
+mission_role(M,R), done(S,G,A), well_formed(Group).
+
+constitutive_rules:
+1: count-as play(bob,reddit_contributor,"reddit_group") .
+2: count-as play(alice,reddit_subscriber,"reddit_group").
+3: count-as responsible("reddit_group","redditsch")
+   while play(A,reddit_contributor,"reddit_group").
+5: play(A,reddit_contributor,"reddit_group")
+   count-as committed(A,submit,"redditsch")
+   while responsible("reddit_group","redditsch").
+6: play(A,reddit_subscriber,"reddit_group")
+   count-as committed(A,retrieve,"redditsch")
+     while responsible("reddit_group","redditsch").
+7: count-as done(redditsch,submit_post,A)
+       when submit(funny, test, test, "https://i.imgur.com/Hyo0tWD.jpeg",
+        fun)[sai__agent(A)].
+8: count-as done(redditsch,retrieve_post,A)
+    when retrieve(funny)[sai__agent(A)].
+
+
+
+
