@@ -1,5 +1,5 @@
 /*
-   example: house building
+   example: reddit example
 
    Gradle build file for JaCaMo Application
    September 27, 2018 - 15:33:36
@@ -8,7 +8,7 @@
 defaultTasks 'run'
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
+
 
 version '1.0'
 group   'org.jacamo'
@@ -26,7 +26,9 @@ repositories {
 }
 
 dependencies {
-   implementation('org.jacamo:jacamo:1.2-SNAPSHOT')    
+
+   implementation('org.jacamo:jacamo:1.2-SNAPSHOT')
+    implementation('org.jason:jason:3.2-SNAPSHOT')
 }
 
 sourceSets {
