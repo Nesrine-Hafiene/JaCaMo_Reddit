@@ -24,7 +24,7 @@ task_roles("retrieve_post",  [reddit_subscriber]).
 
 +!in_ora4mas
    <- joinWorkspace("/main/ora4mas",_);
-      lookupArtifact("reddit_group", GroupId);
+      lookupArtifact("funny", GroupId);
       focus(GroupId).
       
 
