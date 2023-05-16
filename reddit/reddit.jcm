@@ -35,10 +35,10 @@ mas reddit_actions {
  
  
     organisation ora4mas : reddit.xml {
-        group reddit_group: reddit_group {
+        group funny: funny {
            debug: inspector_gui(on)
         }
-        scheme redditsch: redditsch{
+        scheme funny_scheme: funny_scheme{
            debug: inspector_gui(on)
         }
 
